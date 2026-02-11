@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b,answer;
+char op;
+
+cout<<"Enter two number:\n";
+cin>>a>>b;
+
+cout<<"Enter opertions(+,-,*,/)\n";
+cin>>op;
+
+switch(op){
+case'+':
+answer=a+b;
+cout<<answer<< ;
+
+
+case'-':
+answer=a-b;
+cout<<answer<< ;
+
+
+
+case'*':
+answer=a*b;
+cout<<answer<< ;
+
+
+
+case'/':
+answer=a/b;
+cout<<answer<< ;
+break;
+}
+
+
+
+return 0;
+
+}
