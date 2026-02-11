@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n;
+
+cout<<"Enter a Number: \n";
+cin>>n;
+
+if(n>0){
+cout<<"Number is Positive";
+}
+
+else if(n<0){
+cout<<"Number is Negative";
+}
+
+else{
+cout<<"Number is Invalid";
+}
+
+return 0;
+}
+
+
