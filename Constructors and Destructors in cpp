@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+class test
+{
+int a,b,c;
+public:
+test()
+{
+a=3;
+b=2;
+c=a+b;
+}
+
+test(int x,int y)
+{
+a=x;
+b=y;
+c=a+b;
+}
+
+test(test &ABC){
+a=ABC.a;
+b=ABC.b;
+c=a+b;
+}
+
+void display(){
+cout<<"a:"<<a<<endl;
+cout<<"b:"<<b<<endl;
+cout<<"c:"<<c<<endl;
+}
+
+~test(){
+cout<<"Object Destroyed\n"<<endl;
+}
+};
+
+int main (){
+test obj1;
+obj1.display();
+
+test obj2(4,8);
+obj2.display();
+
+test obj3(obj1);
+obj3.display();
+
+}
