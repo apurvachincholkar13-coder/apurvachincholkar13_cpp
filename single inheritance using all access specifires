@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+class parent
+{
+private:
+int x;
+protected:
+int y;
+public:
+int z;
+parent()
+{
+x=10;
+y=20;
+z=30;
+}
+};
+
+class child:public parent
+{
+public:
+void display(){
+//cout<<x;
+cout<<y<<endl;
+cout<<z<<endl;
+}
+};
+
+int main()
+{
+child cobj;
+cobj.display();
+//cout<<cobj.x;
+//cout<<cobj.y;
+cout<<cobj.z;
+return 0;
+}
