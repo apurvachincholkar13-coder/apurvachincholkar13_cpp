@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class Demo{
+public:
+int a;
+public:
+void getdata()
+{
+cout<<"Enter no.:";
+cin>>a;
+}
+
+void display()
+{
+cout<<"Value: "<<a;
+}
+
+Demo operator +(Demo bb)
+{
+Demo zz;
+zz.a=a+bb.a;
+return zz;
+}
+};
+int main(){
+Demo aa,bb,cc;
+aa.getdata();
+bb.getdata();
+cc=aa+bb;
+aa.display();
+bb.display();
+cc.display();
+return 0;
+}
