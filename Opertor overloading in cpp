@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class complex
+{
+private:
+int real,imag;
+public:
+complex(int r=0,int i=1)
+{
+real=r;
+imag=i;
+}
+
+complex operator +()
+{
+return complex(real,imag);
+}
+
+complex operator -()
+{
+return complex(-real,-imag);
+}
+
+void display(){
+cout<<real<<imag<<endl;
+}
+};
+int main()
+{
+complex a1(5,6);
+cout<<"Original Values:";
+a1.display();
+
+complex a2=+a1;
+cout<<"After +operator";
+a2.display();
+
+complex a3=-a1;
+cout<<"After -opertor";
+a3.display();
+return 0;
+}
