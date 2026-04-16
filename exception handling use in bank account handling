@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main(){
+int correctCard,amt;
+int setcorrectCard=1234;
+int balance=5000;
+cout<<"Enter password: "<<endl;
+cin>>correctCard;
+try
+{
+if(setcorrectCard!=correctCard)
+{
+throw correctCard;
+}
+else{
+cout<<"Valid card"<<endl;
+cout<<"Enter amount to withdraw"<<endl;
+cin>>amt;
+
+try{
+if(amt<balance){
+balance=balance-amt;
+cout<<balance<<endl;
+
+}
+else{
+string b="Insuffcient balance";
+
+throw(b);
+}
+}
+catch(string b){
+cout<<b;
+}
+}
+}
+
+catch(int){
+cout<<"Invalid password";
+}
+return 0;
+}
