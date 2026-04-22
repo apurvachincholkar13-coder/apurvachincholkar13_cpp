@@ -1,0 +1,16 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+ifstream source("ex1.cpp");
+ofstream destination("dest.txt");
+string line;
+while(getline(source,line))
+{
+destination<<line<<endl;
+}
+source.close();
+destination.close();
+return 0;
+}
