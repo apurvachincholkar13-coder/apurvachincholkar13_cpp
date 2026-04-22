@@ -1,0 +1,20 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+//write mode
+string text;
+ofstream outfile("sample.txt");
+getline(cin,text);
+outfile<<text;
+outfile.close();
+
+//read mode
+ifstream infile("sample.txt");
+string content;
+getline(infile,content);
+cout<<"Content of file:"<<content;
+infile.close();
+return 0;
+}
